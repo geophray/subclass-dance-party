@@ -1,22 +1,10 @@
 {
-  "name": "subclassdanceparty",
+  "name": "subclass-dance-party",
   "version": "1.0.0",
-  "description": "",
-  "main": ".eslintrc.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "subclass-dance-party",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx live-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joshskkim/hrr45-subclass-dance-party.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/joshskkim/hrr45-subclass-dance-party/issues"
-  },
-  "homepage": "https://github.com/joshskkim/hrr45-subclass-dance-party#readme"
+  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "license": "UNLICENSED"
 }

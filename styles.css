@@ -36,14 +36,11 @@ body, a:link, a:visited, a:active{
   border-radius: 0px;
 }
 .bouncy{
-  border-color: #E1D6C5;
-  background-color: #E1D6C5;
-  /* background-image: url('robin.png'); */
+  /* border-color: #E1D6C5;
+  background-color: #E1D6C5; */
+  background: url('src/robin.png');
+  background-size: 100%;
 }
-
-/* .bouncy:hover {
-  background: url('robin.png');
-} */
 
 @keyframes bounce {
   0%, 100% {

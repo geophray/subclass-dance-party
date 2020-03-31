@@ -9,9 +9,9 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 BouncyDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);
   this.$node.animate({
-    top: '20px'
-  }, this.timeBetweenSteps / 4).animate({
-    top: '10px'
-  }, this.timeBetweenSteps / 4);
+    top: '+=50px'
+  }, this.timeBetweenSteps / 2, 'swing').animate({
+    top: '-=50px'
+  }, this.timeBetweenSteps / 2, 'swing');
 
 };

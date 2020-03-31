@@ -40,6 +40,21 @@ var Dancer = function (top, left, timeBetweenSteps) {
 
 Dancer.prototype.step = function() {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  var moused = this;
+  moused.$node.on('mouseover', function () {
+    var mousedSettings = {
+      height: 300,
+      width: 300
+    };
+    moused.$node.css(mousedSettings);
+  });
+  moused.$node.on('mouseleave', function() {
+    var styleSettings = {
+      height: 0,
+      width: 0
+    };
+    moused.$node.css(styleSettings);
+  });
 };
 
 Dancer.prototype.setPosition = function(top, left) {
@@ -63,4 +78,13 @@ Dancer.prototype.lineUp = function(dancer, newLeft) {
   //   };
   //   window.dancers[i].$node.css(styleSettings);
   // };
+};
+
+Dancer.prototype.getDistance = function(other) {
+  // Use pythagorean theorem to figure out hypontenuse
+  var a = Math.abs(other.$node.css('left') - this.$node.css('left'));
+  var b = Math.abs(other.$node.css('top') - this.$node.css('top'));
+  var cSquared = a * a + b * b;
+  var distance = Math.sqrt(cSquared);
+  return distance;
 };

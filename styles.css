@@ -13,6 +13,10 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+.lineUpButton{
+  padding:5px 12px;
+  float:left;
+}
 .topbar{
   height:32px;
   background-color: #555;
@@ -21,27 +25,31 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border:10px solid #C7515E;
+  background-color: #C7515E;
+  border-radius:1000px;
   position:absolute;
 }
 .square{
-  border-color: blue;
+  border-color: #6D5570;
+  background-color: #6D5570;
   border-radius: 0px;
-  animation-direction: alternate;
 }
 .bouncy{
-  border-color: orange;
-  animation: bounce 1s infinite;
-  animation-direction: alternate;
-  border-radius: 0px;
+  border-color: #E1D6C5;
+  background-color: #E1D6C5;
+  /* background-image: url('robin.png'); */
 }
 
+/* .bouncy:hover {
+  background: url('robin.png');
+} */
+
 @keyframes bounce {
-  from {
+  0%, 100% {
     transform: translate(0, 50px);
   }
-  to {
+  50% {
     transform: translate(0, -50px);
   }
 }

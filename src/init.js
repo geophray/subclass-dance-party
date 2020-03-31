@@ -43,5 +43,13 @@ $(document).ready(function() {
 
   });
 
+  // $('.dancer').on('click', function (event) {
+  //   var danceGroup = [];
+  //   for (var i = 0; i < window.dancers.length; i++) {
+  //     var distance = this.getDistance(window.dancers[i]);
+  //     if ()
+  //   }
+  // });
+
 });
 

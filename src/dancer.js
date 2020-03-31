@@ -43,15 +43,19 @@ Dancer.prototype.step = function() {
   var moused = this;
   moused.$node.on('mouseover', function () {
     var mousedSettings = {
-      height: 300,
-      width: 300
+      height: '30px',
+      width: '30px',
+      top: '-=15px',
+      left: '-=15px'
     };
     moused.$node.css(mousedSettings);
   });
   moused.$node.on('mouseleave', function() {
     var styleSettings = {
-      height: 0,
-      width: 0
+      height: '30px',
+      width: '30px',
+      top: '+=15px',
+      left: '+=15px'
     };
     moused.$node.css(styleSettings);
   });
@@ -71,13 +75,6 @@ Dancer.prototype.lineUp = function(dancer, newLeft) {
     top: '50%'
   };
   dancer.$node.css(styleSettings);
-
-  // for (var i = 0; i < window.dancers.length; i++) {
-  //   styleSettings = {
-  //     top: '+= 25px'
-  //   };
-  //   window.dancers[i].$node.css(styleSettings);
-  // };
 };
 
 Dancer.prototype.getDistance = function(other) {

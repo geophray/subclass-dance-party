@@ -40,6 +40,10 @@ $(document).ready(function() {
       window.dancers[i].lineUp(window.dancers[i], left);
       left += 35;
     }
+    // window.dancers.forEach(function(dancer) {
+    //   dancer.lineUp(dancer, left);
+    //   left += 35;
+    // });
 
   });
 

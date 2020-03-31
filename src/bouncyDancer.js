@@ -8,13 +8,13 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 
 BouncyDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);
-  // this.$node.toggleClass('bouncy');
-  this.$node.animate({
-    top: '+=50px',
-    borderColor: 'white'
-  }, this.timeBetweenSteps / 2, 'swing').animate({
-    top: '-=50px',
-    borderColor: 'green'
-  }, this.timeBetweenSteps / 2, 'swing');
 
+  var moused = this;
+  $('.bouncy').on('mouseover', function () {
+    var styleSettings = {
+      height: 300,
+      width: 300
+    };
+    moused.$node.css(styleSettings);
+  });
 };

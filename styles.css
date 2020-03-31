@@ -26,23 +26,18 @@ body, a:link, a:visited, a:active{
 }
 .dancer{
   border:10px solid #C7515E;
-  background-color: #C7515E;
   border-radius:1000px;
   position:absolute;
-  width: 10px;
-  height: 10px;
+  background: url('src/robin.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .square{
   border-color: #6D5570;
-  background-color: #6D5570;
   border-radius: 0px;
 }
 .bouncy{
-  height: 100px;
-  width: 100px;
-  border: 0px;
-  background: url('src/robin.png');
-  background-size: contain, cover;
+  border-color: #465784;
 }
 
 @keyframes bounce {

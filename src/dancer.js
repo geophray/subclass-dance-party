@@ -43,22 +43,21 @@ Dancer.prototype.step = function() {
   var moused = this;
   moused.$node.on('mouseover', function () {
     var mousedSettings = {
-      height: '30px',
-      width: '30px',
-      top: '-=15px',
-      left: '-=15px'
+      border: '0px',
+      height: '250',
+      width: '250'
+      // background: 'url("src/robin.png")',
+      // backgroundSize: 'contain, cover'
     };
     moused.$node.css(mousedSettings);
   });
-  moused.$node.on('mouseleave', function() {
-    var styleSettings = {
-      height: '30px',
-      width: '30px',
-      top: '+=15px',
-      left: '+=15px'
-    };
-    moused.$node.css(styleSettings);
-  });
+  // moused.$node.on('mouseleave', function() {
+  //   var styleSettings = {
+  //     background: 'none',
+  //     border: '10px'
+  //   };
+  //   moused.$node.css(styleSettings);
+  // });
 };
 
 Dancer.prototype.setPosition = function(top, left) {
@@ -72,7 +71,7 @@ Dancer.prototype.setPosition = function(top, left) {
 Dancer.prototype.lineUp = function(dancer, newLeft) {
   var styleSettings = {
     left: newLeft + 'px',
-    top: '50%'
+    top: '80%'
   };
   dancer.$node.css(styleSettings);
 };

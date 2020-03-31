@@ -25,3 +25,10 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.pop{
+  border-color: blue;
+}
+.bouncy{
+  border-color: orange;
+}
+

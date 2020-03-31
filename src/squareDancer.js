@@ -9,10 +9,12 @@ SquareDancer.prototype.constructor = SquareDancer;
 SquareDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.animate({
+    left: '-=10px',
+    top: '-=10px',
     height: '20px',
     width: '20px'
-  }).animate({
+  }, this.timeBetweenSteps/2).animate({
     height: '0px',
     width: '0px'
-  });
+  }, this.timeBetweenSteps/2);
 };

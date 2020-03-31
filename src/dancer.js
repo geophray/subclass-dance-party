@@ -49,3 +49,18 @@ Dancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+Dancer.prototype.lineUp = function() {
+  var styleSettings = {
+    left: '300px',
+    top: '100px'
+  };
+  this.$node.css(styleSettings);
+
+  // for (var i = 0; i < window.dancers.length; i++) {
+  //   styleSettings = {
+  //     top: '+= 25px'
+  //   };
+  //   window.dancers[i].$node.css(styleSettings);
+  // };
+};

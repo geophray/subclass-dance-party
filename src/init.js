@@ -35,10 +35,10 @@ $(document).ready(function() {
   });
 
   $('.lineUpButton').on('click', function (event) {
-    var top = 50;
+    var left = 50;
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].lineUp(window.dancers[i], top);
-      top += 25;
+      window.dancers[i].lineUp(window.dancers[i], left);
+      left += 35;
     }
 
   });

@@ -14,7 +14,6 @@ BouncyDancer.prototype.step = function () {
     borderColor: 'white'
   }, this.timeBetweenSteps / 2, 'swing').animate({
     top: '-=50px',
-    bottom: 'top-30px',
     borderColor: 'green'
   }, this.timeBetweenSteps / 2, 'swing');
 

@@ -25,8 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.pop{
+.square{
   border-color: blue;
+  border-radius: 0px;
 }
 .bouncy{
   border-color: orange;

@@ -9,12 +9,14 @@ SquareDancer.prototype.constructor = SquareDancer;
 SquareDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.animate({
-    left: '-=10px',
-    top: '-=10px',
+    left: '-=20px',
+    top: '-=20px',
     height: '20px',
     width: '20px'
   }, this.timeBetweenSteps / 2).animate({
     height: '0px',
     width: '0px'
   }, this.timeBetweenSteps / 2);
+  this.$node.toggleClass('bouncy');
+
 };

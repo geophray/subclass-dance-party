@@ -28,6 +28,7 @@ body, a:link, a:visited, a:active{
 .square{
   border-color: blue;
   border-radius: 0px;
+  animation-direction: alternate;
 }
 .bouncy{
   border-color: orange;
@@ -45,3 +46,11 @@ body, a:link, a:visited, a:active{
   }
 }
 
+@keyframes rock {
+  0%, 100% {
+    transform: skewY(20deg);
+  }
+  50% {
+    transform: skewY(-20deg);
+  }
+}

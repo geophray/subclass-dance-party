@@ -47,15 +47,23 @@ $(document).ready(function() {
 
   });
 
-  // $('body').on('click', '.dancer', function (event) {
-  //   var clicked = this.parentNode;
-  //   var danceGroup = [];
-  //   var distances = [];
-  //   for (var i = 0; i < window.dancers.length; i++) {
-  //     distances.push(clicked.getDistance(window.dancers[i]));
-  //   }
-  //   console.log(distances);
-  // });
+  $('.groupButton').on('click', function() {
+    var availableDancers = window.dancers.slice();
+    var groupDancers = function(availableDancers) {
+      var distances = [];
+      availableDancers[0]['distance'] = 0;
+      for (var i = 1; i < availableDancers.length; i++) {
+        // distances.push(availableDancers[0].getDistance(availableDancers[i]));
+        availableDancers[i]['distance'] = availableDancers[0].getDistance(availableDancers[i]);
+        var sorted = _.sortBy(availableDancers, 'distance');
+      }
+
+
+    };
+
+    groupDancers(availableDancers);
+
+  });
 
 });
 

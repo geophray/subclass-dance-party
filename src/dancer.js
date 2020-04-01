@@ -85,10 +85,10 @@ Dancer.prototype.getDistance = function(other) {
   return distance;
 };
 
-Dancer.prototype.groupDancers = function () {
-  var danceGroup = [];
-  var distances = [];
-  for (var i = 0; i < window.dancers.length; i++) {
-    distances.push(this.getDistance(window.dancers[i]));
-  }
-};
+// Dancer.prototype.groupDancers = function () {
+//   var danceGroup = [];
+//   var distances = [];
+//   for (var i = 0; i < window.dancers.length; i++) {
+//     distances.push(this.getDistance(window.dancers[i]));
+//   }
+// };

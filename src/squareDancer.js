@@ -9,5 +9,5 @@ SquareDancer.prototype.constructor = SquareDancer;
 
 SquareDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  this.$node.toggleClass('square');
+  // this.$node.toggleClass('square');
 };

@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid #C7515E;
+  border:10px solid #C33D68;
   border-radius:1000px;
   position:absolute;
   background: url('src/robin.png');
@@ -35,11 +35,11 @@ body, a:link, a:visited, a:active{
   background-repeat: no-repeat;
 }
 .square{
-  border-color: #6D5570;
+  border-color: #A0B36B;
   border-radius: 0px;
 }
 .bouncy{
-  border-color: #465784;
+  border-color: #7C4C38;
 }
 
 @keyframes bounce {

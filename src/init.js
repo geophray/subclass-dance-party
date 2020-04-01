@@ -47,12 +47,14 @@ $(document).ready(function() {
 
   });
 
-  // $('.dancer').on('click', function (event) {
+  // $('body').on('click', '.dancer', function (event) {
+  //   var clicked = this.parentNode;
   //   var danceGroup = [];
+  //   var distances = [];
   //   for (var i = 0; i < window.dancers.length; i++) {
-  //     var distance = this.getDistance(window.dancers[i]);
-  //     if ()
+  //     distances.push(clicked.getDistance(window.dancers[i]));
   //   }
+  //   console.log(distances);
   // });
 
 });

@@ -36,6 +36,8 @@ var Dancer = function (top, left, timeBetweenSteps) {
   this.step();
   this.setPosition(top, left);
   this.timeBetweenSteps = timeBetweenSteps;
+
+  // this.onclick = groupDancers();
 };
 
 Dancer.prototype.step = function() {
@@ -46,8 +48,6 @@ Dancer.prototype.step = function() {
       border: '0px',
       height: '250',
       width: '250'
-      // background: 'url("src/robin.png")',
-      // backgroundSize: 'contain, cover'
     };
     moused.$node.css(mousedSettings);
   });
@@ -71,7 +71,7 @@ Dancer.prototype.setPosition = function(top, left) {
 Dancer.prototype.lineUp = function(dancer, newLeft) {
   var styleSettings = {
     left: newLeft + 'px',
-    top: '80%'
+    top: '65%'
   };
   dancer.$node.css(styleSettings);
 };
@@ -83,4 +83,12 @@ Dancer.prototype.getDistance = function(other) {
   var cSquared = a * a + b * b;
   var distance = Math.sqrt(cSquared);
   return distance;
+};
+
+Dancer.prototype.groupDancers = function () {
+  var danceGroup = [];
+  var distances = [];
+  for (var i = 0; i < window.dancers.length; i++) {
+    distances.push(this.getDistance(window.dancers[i]));
+  }
 };

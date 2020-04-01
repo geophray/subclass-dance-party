@@ -49,15 +49,44 @@ $(document).ready(function() {
 
   $('.groupButton').on('click', function() {
     var availableDancers = window.dancers.slice();
+
+    var createGroup = function(group) {
+      var groupTop = $('body').height() * Math.random();
+      var groupLeft = $('body').width() * Math.random();
+
+      for (var j = 0; j < group.length; j++) {
+        group[j].setPosition(groupTop, groupLeft);
+      }
+    };
+
     var groupDancers = function(availableDancers) {
-      var distances = [];
-      availableDancers[0]['distance'] = 0;
-      for (var i = 1; i < availableDancers.length; i++) {
-        // distances.push(availableDancers[0].getDistance(availableDancers[i]));
-        availableDancers[i]['distance'] = availableDancers[0].getDistance(availableDancers[i]);
-        var sorted = _.sortBy(availableDancers, 'distance');
+      if (availableDancers.length < 3) {
+        // Group them together,
+        createGroup(availableDancers);
+        // Return
+        return;
       }
 
+      for (var i = 1; i < availableDancers.length; i++) {
+        availableDancers[0]['distance'] = 0;
+        availableDancers[i]['distance'] = availableDancers[0].getDistance(availableDancers[i]);
+      }
+
+      var sorted = _.sortBy(availableDancers, 'distance');
+      var group = sorted.splice(0, 3);
+
+      // var createGroup = function(group) {
+      //   var groupTop = $('body').height() * Math.random();
+      //   var groupLeft = $('body').width() * Math.random();
+
+      //   for (var j = 0; j < group.length; j++) {
+      //     group[j].setPosition(groupTop, groupLeft);
+      //   }
+      // };
+
+      createGroup(group);
+
+      groupDancers(sorted);
 
     };
 

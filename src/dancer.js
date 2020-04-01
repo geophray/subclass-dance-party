@@ -78,8 +78,8 @@ Dancer.prototype.lineUp = function(dancer, newLeft) {
 
 Dancer.prototype.getDistance = function(other) {
   // Use pythagorean theorem to figure out hypontenuse
-  var a = Math.abs(other.$node.css('left') - this.$node.css('left'));
-  var b = Math.abs(other.$node.css('top') - this.$node.css('top'));
+  var a = Math.abs(other.$node.position().left - this.$node.position().left);
+  var b = Math.abs(other.$node.position().top - this.$node.position().top);
   var cSquared = a * a + b * b;
   var distance = Math.sqrt(cSquared);
   return distance;
